@@ -1,10 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AddRecipeModalComponent } from './add-recipe/add-recipe-modal/add-recipe-modal.component';
+import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page/landing-page.component';
-import { AddRecipeComponent } from './add-recipe/add-recipe.component';
-import { AddRecipeModalComponent } from './add-recipe/add-recipe-modal/add-recipe-modal.component';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { AddRecipeModalComponent } from './add-recipe/add-recipe-modal/add-recip
     LandingPageComponent,
     AddRecipeComponent,
     AddRecipeModalComponent,
-    NgModule
+    NgbModule
   ],
   imports: [
     BrowserModule
