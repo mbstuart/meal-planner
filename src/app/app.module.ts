@@ -11,7 +11,8 @@ import { AddRecipeModalComponent } from './add-recipe/add-recipe-modal/add-recip
     AppComponent,
     LandingPageComponent,
     AddRecipeComponent,
-    AddRecipeModalComponent
+    AddRecipeModalComponent,
+    NgModule
   ],
   imports: [
     BrowserModule
