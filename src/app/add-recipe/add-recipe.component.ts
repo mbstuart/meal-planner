@@ -23,4 +23,8 @@ export class AddRecipeComponent implements OnInit {
     this.activeModal.close(this.recipe)
   }
 
+  dismiss(reason?: string) {
+    this.activeModal.dismiss(reason);
+  }
+
 }

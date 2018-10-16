@@ -8,17 +8,15 @@ if (environment.production) {
   enableProdMode();
 }
 
-if (environment.cordova) {
-  let onDeviceReady = () => {
-    platformBrowserDynamic().bootstrapModule(AppModule)
-    .catch(err => console.log(err));
-  };
-
-  document.addEventListener('deviceready', onDeviceReady, false);
-  
-} else {
+let onDeviceReady = () => {
   platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.log(err));
+};
+
+if (environment.cordova) {
+  document.addEventListener('deviceready', onDeviceReady, false);
+} else {
+  onDeviceReady();
 }
 
 
