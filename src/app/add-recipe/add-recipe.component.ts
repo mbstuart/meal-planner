@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Recipe } from './model/recipe';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-add-recipe',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddRecipeComponent implements OnInit {
 
-  constructor() { }
+  public recipe: Recipe;
+
+  constructor(
+    private activeModal: NgbActiveModal
+  ) { }
 
   ngOnInit() {
+    this.recipe = new Recipe();
+  }
+
+  confirm() {
+    this.activeModal.close(this.recipe)
   }
 
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AddRecipeComponent } from 'src/app/add-recipe/add-recipe.component';
 
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap'
-import { AddRecipeModalComponent } from 'src/app/add-recipe/add-recipe-modal/add-recipe-modal.component';
 
 @Component({
   selector: 'app-landing-page',
@@ -18,7 +18,7 @@ export class LandingPageComponent implements OnInit {
   }
 
   openAddRecipeModal() {
-    const modal = this.ngbModal.open(AddRecipeModalComponent);
+    const modal = this.ngbModal.open(AddRecipeComponent);
 
     modal.result.then(res => {
       // do something
